@@ -39,3 +39,16 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# editor / ide
+.qwen/
+.vscode/
+.idea/
+
+# screenshots (root level only)
+/Screenshot_*.png
+/Screenshot_*.PNG
+
+# AI agent files (local only)
+CLAUDE.md
+AGENTS.md
