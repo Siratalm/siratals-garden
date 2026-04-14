@@ -40,9 +40,9 @@ export default function ProjectsPage() {
     <div className="flex flex-col">
       <Navbar />
       <main className="flex-1">
-        <section className="max-w-7xl mx-auto px-6 pt-16 pb-8">
-          <h1 className="text-3xl font-normal tracking-tight mb-2">Projects</h1>
-          <p className="text-muted leading-relaxed max-w-2xl font-sans">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 pt-8 sm:pt-12 lg:pt-16 pb-8">
+          <h1 className="text-3xl sm:text-4xl font-normal tracking-tight mb-2">Projects</h1>
+          <p className="text-muted leading-relaxed max-w-2xl font-sans text-sm">
             A collection of things I&apos;ve built — from web apps to games.
           </p>
         </section>

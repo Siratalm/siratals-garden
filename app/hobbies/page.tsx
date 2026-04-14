@@ -178,17 +178,17 @@ export default function HobbiesPage() {
     <div className="flex flex-col">
       <Navbar />
       <main className="flex-1">
-        <section className="max-w-7xl mx-auto px-6 pt-16 pb-8">
-          <h1 className="text-3xl font-normal tracking-tight mb-2">Hobbies</h1>
-          <p className="text-muted leading-relaxed max-w-2xl font-sans">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 pt-8 sm:pt-12 lg:pt-16 pb-8">
+          <h1 className="text-3xl sm:text-4xl font-normal tracking-tight mb-2">Hobbies</h1>
+          <p className="text-muted leading-relaxed max-w-2xl font-sans text-sm">
             Coffee, plants, climbing, film photography, and mechanical keyboards.
           </p>
         </section>
 
         {/* Coffee */}
-        <section className="mb-12">
-          <div className="max-w-7xl mx-auto px-6 pb-4">
-            <h2 className="text-sm uppercase tracking-wider text-muted font-sans font-medium">☕ Coffee</h2>
+        <section className="mb-8 sm:mb-12">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-4">
+            <h2 className="text-sm uppercase tracking-wider text-muted font-sans font-medium"><span aria-hidden="true">☕</span> Coffee</h2>
           </div>
           <BentoGrid columns={4}>
             {coffee.map((item, i) => (
@@ -198,9 +198,9 @@ export default function HobbiesPage() {
         </section>
 
         {/* Plants */}
-        <section className="mb-12">
-          <div className="max-w-7xl mx-auto px-6 pb-4">
-            <h2 className="text-sm uppercase tracking-wider text-muted font-sans font-medium">🌱 Plants</h2>
+        <section className="mb-8 sm:mb-12 border-t border-border pt-8 sm:pt-10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-4">
+            <h2 className="text-sm uppercase tracking-wider text-muted font-sans font-medium"><span aria-hidden="true">🌱</span> Plants</h2>
           </div>
           <BentoGrid columns={4}>
             {plants.map((item, i) => (
@@ -210,9 +210,9 @@ export default function HobbiesPage() {
         </section>
 
         {/* Climbing */}
-        <section className="mb-12">
-          <div className="max-w-7xl mx-auto px-6 pb-4">
-            <h2 className="text-sm uppercase tracking-wider text-muted font-sans font-medium">🧗 Climbing</h2>
+        <section className="mb-8 sm:mb-12 border-t border-border pt-8 sm:pt-10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-4">
+            <h2 className="text-sm uppercase tracking-wider text-muted font-sans font-medium"><span aria-hidden="true">🧗</span> Climbing</h2>
           </div>
           <BentoGrid columns={4}>
             {climbing.map((item, i) => (
@@ -222,9 +222,9 @@ export default function HobbiesPage() {
         </section>
 
         {/* Film */}
-        <section className="mb-12">
-          <div className="max-w-7xl mx-auto px-6 pb-4">
-            <h2 className="text-sm uppercase tracking-wider text-muted font-sans font-medium">📷 Film</h2>
+        <section className="mb-8 sm:mb-12 border-t border-border pt-8 sm:pt-10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-4">
+            <h2 className="text-sm uppercase tracking-wider text-muted font-sans font-medium"><span aria-hidden="true">📷</span> Film</h2>
           </div>
           <BentoGrid columns={4}>
             {film.map((item, i) => (
@@ -234,9 +234,9 @@ export default function HobbiesPage() {
         </section>
 
         {/* Keyboards */}
-        <section className="mb-12">
-          <div className="max-w-7xl mx-auto px-6 pb-4">
-            <h2 className="text-sm uppercase tracking-wider text-muted font-sans font-medium">⌨️ Keyboards</h2>
+        <section className="mb-8 sm:mb-12 border-t border-border pt-8 sm:pt-10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-4">
+            <h2 className="text-sm uppercase tracking-wider text-muted font-sans font-medium"><span aria-hidden="true">⌨️</span> Keyboards</h2>
           </div>
           <BentoGrid columns={4}>
             {keyboards.map((item, i) => (

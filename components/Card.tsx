@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useMemo } from "react";
 
 interface Badge {
   label: string;
@@ -49,8 +50,6 @@ const placeholderImages = [
   "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
 ];
 
-let imageIndex = 0;
-
 export default function Card({
   category,
   subcategory,
@@ -66,7 +65,13 @@ export default function Card({
   const showArrow = !!href;
   const isExternal = external || (href ? href.startsWith("http") : false);
 
-  const image = imageUrl || placeholderImages[imageIndex++ % placeholderImages.length];
+  // Use useMemo to deterministically select image based on title hash (avoids mutable state)
+  const image = useMemo(() => {
+    if (imageUrl) return imageUrl;
+    // Hash the title to get a consistent index
+    const hash = title.split("").reduce((acc, char) => acc + char.charCodeAt(0), 0);
+    return placeholderImages[hash % placeholderImages.length];
+  }, [title, imageUrl]);
 
   const CardInner = (
     <div className="group flex flex-col bg-card-bg border border-border rounded-lg overflow-hidden transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-xl hover:shadow-black/5 hover:-translate-y-1">
@@ -81,7 +86,7 @@ export default function Card({
       </div>
 
       {/* Content */}
-      <div className="p-4 flex flex-col gap-2 flex-1">
+      <div className="p-3 sm:p-4 flex flex-col gap-2 flex-1">
         {/* Category · Subcategory + Arrow */}
         <div className="flex items-center justify-between">
           <span className="text-xs text-muted font-sans">
@@ -112,7 +117,7 @@ export default function Card({
         )}
 
         {/* Title */}
-        <h3 className="text-xl sm:text-2xl font-normal leading-tight">{title}</h3>
+        <h3 className="text-lg sm:text-xl lg:text-2xl font-normal leading-tight">{title}</h3>
 
         {/* Metadata */}
         {metadata && (

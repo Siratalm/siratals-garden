@@ -91,8 +91,8 @@ export default function WritingPage() {
     <div className="flex flex-col">
       <Navbar />
       <main className="flex-1">
-        <section className="max-w-7xl mx-auto px-6 pt-16 pb-8">
-          <h1 className="text-5xl sm:text-6xl font-normal tracking-tight mb-4">writing.</h1>
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 pt-8 sm:pt-12 lg:pt-16 pb-8">
+          <h1 className="text-3xl sm:text-4xl font-normal tracking-tight mb-2">writing.</h1>
           <p className="text-muted leading-relaxed max-w-2xl font-sans text-sm">
             I have a blog that doesn&apos;t really adhere to any fixed themes. From philosophy essays to
             movie reviews to shower thoughts, it really is the wild west. These days, I&apos;m trying to Tweet

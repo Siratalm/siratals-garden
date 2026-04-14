@@ -37,27 +37,62 @@ a {
   transition: opacity 0.2s ease, color 0.2s ease;
 }
 
-a:hover {
-  opacity: 0.7;
-}
-
-/* Masonry grid using columns */
+/* Masonry grid using columns - responsive */
 .masonry-2 {
-  columns: 2;
+  columns: 1;
   column-gap: 12px;
 }
 .masonry-3 {
-  columns: 3;
+  columns: 1;
   column-gap: 12px;
 }
 .masonry-4 {
-  columns: 4;
+  columns: 1;
   column-gap: 12px;
+}
+
+@media (min-width: 640px) {
+  .masonry-2 {
+    columns: 2;
+    column-gap: 16px;
+  }
+  .masonry-3 {
+    columns: 2;
+    column-gap: 16px;
+  }
+  .masonry-4 {
+    columns: 2;
+    column-gap: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .masonry-3 {
+    columns: 3;
+    column-gap: 16px;
+  }
+  .masonry-4 {
+    columns: 3;
+    column-gap: 16px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .masonry-4 {
+    columns: 4;
+    column-gap: 20px;
+  }
 }
 
 .masonry-item {
   break-inside: avoid;
   margin-bottom: 12px;
+}
+
+@media (min-width: 640px) {
+  .masonry-item {
+    margin-bottom: 16px;
+  }
 }
 
 @keyframes fadeIn {
@@ -69,10 +104,11 @@ a:hover {
   animation: fadeIn 0.5s ease-out forwards;
 }
 
-/* Line clamp utility */
-.line-clamp-3 {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }

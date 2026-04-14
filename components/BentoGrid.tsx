@@ -11,7 +11,7 @@ export default function BentoGrid({ children, columns = 3 }: BentoGridProps) {
   };
 
   return (
-    <div className={`max-w-7xl mx-auto px-6 pb-16 ${columnClasses[columns]}`}>
+    <div className={`max-w-7xl mx-auto px-4 sm:px-6 pb-8 sm:pb-12 ${columnClasses[columns]}`}>
       {children}
     </div>
   );

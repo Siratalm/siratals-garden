@@ -19,7 +19,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Chester",
+  title: "Siratal's Garden",
   description: "Welcome to my digital garden, a little space on the interwebs that grows over time.",
   icons: {
     icon: "/favicon.svg",
@@ -44,12 +44,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${newsreader.variable} ${inter.variable} h-full antialiased`}
+      className={`${newsreader.variable} ${inter.variable} antialiased`}
     >
       <head>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body className="min-h-full flex flex-col bg-background text-foreground">{children}</body>
+      <body className="min-h-screen flex flex-col bg-background text-foreground">{children}</body>
     </html>
   );
 }
